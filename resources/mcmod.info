@@ -1,0 +1,16 @@
+[
+{
+  "modid": "CerealCraft",
+  "name": "Cereal Craft",
+  "description": "For Cereal Lovers",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Zim"],
+  "credits": "The Forge and FML guys, for making this all possible. As well as Jezza for the help",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

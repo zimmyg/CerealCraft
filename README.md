@@ -1,4 +1,4 @@
 CerealCraft
 ===========
 
-Like Cereal? Like Minecraft? Welcome, friend.
+Do you like cereal? Do you like Minecraft? Welcome, friend.

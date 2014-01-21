@@ -2,9 +2,8 @@ package zim.cerealcraft.config;
 
 import java.io.File;
 
+import zim.cerealcraft.Reference;
 import net.minecraftforge.common.Configuration;
-import zim.cerealcraft.items.ItemInfo;
-import zim.cerealcraft.items.Items;
 
 public class ConfigHandler 
 {
@@ -14,8 +13,7 @@ public class ConfigHandler
 		
 		config.load();
 		
-		ItemInfo.WAND_ID = config.getItem(ItemInfo.WAND_KEY, ItemInfo.WAND_DEFAULT).getInt() - 256;
-		Items.init();
+		Reference.ModItems.CEREALBOWL_ID = config.get("IDs", Reference.ModItems.CEREALBOWL_NAME, Reference.ModItems.CEREALBOWL_ID_DEFAULT).getInt();
 		
 		config.save();
 	}

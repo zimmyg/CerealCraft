@@ -14,6 +14,8 @@ public class ConfigHandler
 		config.load();
 		
 		Reference.ModItems.CEREALBOWL_ID = config.get("IDs", Reference.ModItems.CEREALBOWL_NAME, Reference.ModItems.CEREALBOWL_ID_DEFAULT).getInt();
+		Reference.ModItems.DEBUGTOOL_ID = config.get("IDs", Reference.ModItems.DEBUGTOOL_NAME, Reference.ModItems.DEBUGTOOL_ID_DEFAULT).getInt();
+		Reference.ModItems.SMASHEDCORN_ID = config.get("IDs", Reference.ModItems.SMASHEDCORN_NAME, Reference.ModItems.SMASHEDCORN_ID_DEFAULT).getInt();
 		
 		config.save();
 	}

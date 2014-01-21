@@ -51,6 +51,7 @@ public class CerealCraft
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	ModItems.registerRecipes();
     }
     
     @EventHandler

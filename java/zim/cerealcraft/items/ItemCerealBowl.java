@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemCerealBowl extends FoodItemCC
 {
@@ -13,14 +14,21 @@ public class ItemCerealBowl extends FoodItemCC
 	{
 		super(id, 8, 0.7F, name);
 		setMaxStackSize(1);
-		setPotionEffect(1, 4, 0, 1.0F);
+		//setPotionEffect(1, 4, 0, 1.0F);
 	}
 	
 	public static void registerRecipe()
 	{
-		CraftingManager.getInstance().addRecipe(new ItemStack(ModItems.cerealBowl), 
-	    		new Object[] { "CCC", " M ", " U ", Character.valueOf('C'), new ItemStack(ModItems.smashedCorn),
-	    											Character.valueOf('M'), new ItemStack(Item.bucketMilk),
-	    											Character.valueOf('U'), new ItemStack(Item.bowlEmpty)});
+		CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ModItems.cerealBowl), 
+				new Object[] { new ItemStack(ModItems.cerealBox, 1, OreDictionary.WILDCARD_VALUE), 
+							   new ItemStack(Item.bucketMilk), 
+							   new ItemStack(Item.bowlEmpty) });
+	}
+	
+	@Override
+	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+	{
+		super.onEaten(par1ItemStack, par2World, par3EntityPlayer);
+		return new ItemStack(Item.bowlEmpty);
 	}
 }

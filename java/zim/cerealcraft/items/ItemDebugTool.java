@@ -28,7 +28,7 @@ public class ItemDebugTool extends ItemCC
 		if(!world.isRemote){			
 			if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)){
 				cycleMode();	
-				player.addChatMessage("" + mode);
+				player.addChatMessage("Debug Mode: " + mode);
 			} else {
 				switch(mode){
 					case CLR_HUNGR:
